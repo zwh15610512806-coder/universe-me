@@ -1,5 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 
+export type AccentTone = "cyan" | "violet" | "amber" | "rose";
+
 export type NavItem = {
   label: string;
   href: string;
@@ -12,6 +14,23 @@ export type HomeFeature = {
   href: string;
   icon: LucideIcon;
   iconTone: string;
+};
+
+export type HomeJourneyRoute = {
+  label: string;
+  eyebrow: string;
+  description: string;
+  href: string;
+  accent: AccentTone;
+  icon: LucideIcon;
+};
+
+export type HomeHeroSpotlight = {
+  label: string;
+  title: string;
+  description: string;
+  href: string;
+  metrics: DetailItem[];
 };
 
 export type StatItem = {
@@ -37,8 +56,6 @@ export type FeaturedExploration = {
   description: string;
   href: string;
 };
-
-export type AccentTone = "cyan" | "violet" | "amber" | "rose";
 
 export type Mission = {
   slug: string;

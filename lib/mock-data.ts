@@ -1,9 +1,19 @@
-import { Clock3, Milestone, Network, Radar } from "lucide-react";
+import {
+  Clock3,
+  GalleryHorizontalEnd,
+  Home,
+  Milestone,
+  Network,
+  Radar,
+  Rocket
+} from "lucide-react";
 import type {
   CosmicEvent,
   FeaturedExploration,
   GalleryImage,
   HomeFeature,
+  HomeHeroSpotlight,
+  HomeJourneyRoute,
   InsightCard,
   Mission,
   NavItem,
@@ -22,9 +32,9 @@ export const navItems: NavItem[] = [
 ];
 
 export const homeStats: StatItem[] = [
-  { label: "探索模块", value: "6", detail: "任务、时间线、结构、星图和图库" },
-  { label: "内容条目", value: "40+", detail: "本地模拟数据驱动全部页面" },
-  { label: "视觉系统", value: "3D", detail: "动态星空、玻璃卡片和深空仪表盘" }
+  { label: "探索模块", value: "6", detail: "任务、时间线、结构、星图和图像库" },
+  { label: "本地条目", value: "40+", detail: "全部页面先由 mock 数据驱动" },
+  { label: "视觉系统", value: "3D", detail: "星场、玻璃面板和深空动效" }
 ];
 
 export const homeFeatures: HomeFeature[] = [
@@ -59,6 +69,57 @@ export const homeFeatures: HomeFeature[] = [
     href: "/starmap",
     icon: Radar,
     iconTone: "border-nebula-rose/30 bg-nebula-rose/10 text-nebula-rose"
+  }
+];
+
+export const homeJourneyRoutes: HomeJourneyRoute[] = [
+  {
+    label: "首页",
+    eyebrow: "起点",
+    description: "从一条清晰路线进入 Cosmos Atlas。",
+    href: "/",
+    accent: "cyan",
+    icon: Home
+  },
+  {
+    label: "人类探索",
+    eyebrow: "任务",
+    description: "追踪人类离开地球后的关键节点。",
+    href: "/missions",
+    accent: "amber",
+    icon: Rocket
+  },
+  {
+    label: "宇宙时间线",
+    eyebrow: "深时",
+    description: "把宇宙历史压缩成可阅读的阶段。",
+    href: "/cosmic-timeline",
+    accent: "violet",
+    icon: Clock3
+  },
+  {
+    label: "结构层级",
+    eyebrow: "尺度",
+    description: "从行星一路放大到宇宙网。",
+    href: "/structure",
+    accent: "rose",
+    icon: Network
+  },
+  {
+    label: "交互星图",
+    eyebrow: "星空",
+    description: "在三维星图中定位恒星和深空目标。",
+    href: "/starmap",
+    accent: "cyan",
+    icon: Radar
+  },
+  {
+    label: "图像库",
+    eyebrow: "影像",
+    description: "用图像理解星云、星系和小天体。",
+    href: "/gallery",
+    accent: "amber",
+    icon: GalleryHorizontalEnd
   }
 ];
 
@@ -619,21 +680,34 @@ export const galleryImages: GalleryImage[] = [
 
 export const featuredExplorations: FeaturedExploration[] = [
   {
-    label: "精选任务",
+    label: "推荐任务",
     title: "阿波罗 11 号",
     description: "从地月空间的工程协同理解载人深空探索。",
     href: "/missions/apollo-11"
   },
   {
-    label: "精选图像",
+    label: "推荐图像",
     title: "星系团透镜",
     description: "通过引力透镜理解星系团质量和暗物质线索。",
     href: "/gallery/cluster-lens"
   },
   {
-    label: "时间节点",
+    label: "推荐阶段",
     title: "宇宙变得透明",
     description: "宇宙微波背景是读取早期宇宙状态的核心窗口。",
     href: "/cosmic-timeline"
   }
 ];
+
+export const homeHeroSpotlight: HomeHeroSpotlight = {
+  label: "今日推荐探索",
+  title: "从宇宙微波背景开始阅读深时",
+  description:
+    "先进入宇宙历史时间线，观察第一束自由传播的光如何成为今天理解早期宇宙的关键证据。",
+  href: "/cosmic-timeline",
+  metrics: [
+    { label: "入口", value: "宇宙时间线" },
+    { label: "线索", value: "宇宙微波背景" },
+    { label: "尺度", value: "约 138 亿年" }
+  ]
+};

@@ -8,7 +8,8 @@
     "start": "node scripts/run-next.mjs start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "visual:starmap": "node scripts/visual-review-starmap.mjs",
-    "visual:timeline-structure": "node scripts/visual-review-timeline-structure.mjs"
+    "visual:timeline-structure": "node scripts/visual-review-timeline-structure.mjs",
+    "visual:home": "node scripts/visual-review-homepage.mjs"
   },
   "dependencies": {
     "@react-three/drei": "latest",

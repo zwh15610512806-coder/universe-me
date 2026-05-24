@@ -45,7 +45,7 @@ This workspace uses a temporary Git metadata directory `.codex-git` for GitHub u
 - Modify: `lib/types.ts`
 - Modify: `lib/mock-data.ts`
 
-- [ ] **Step 1: Add home journey types**
+- [x] **Step 1: Add home journey types**
 
 In `lib/types.ts`, add these types after `HomeFeature`:
 
@@ -81,7 +81,7 @@ export type NavItem = {
 
 Then keep `HomeJourneyRoute` after `HomeFeature`.
 
-- [ ] **Step 2: Update type imports in mock data**
+- [x] **Step 2: Update type imports in mock data**
 
 In `lib/mock-data.ts`, update the type import block so it includes the new types:
 
@@ -118,7 +118,7 @@ import {
 } from "lucide-react";
 ```
 
-- [ ] **Step 3: Add `homeJourneyRoutes`**
+- [x] **Step 3: Add `homeJourneyRoutes`**
 
 Add this export near `homeFeatures`:
 
@@ -175,7 +175,7 @@ export const homeJourneyRoutes: HomeJourneyRoute[] = [
 ];
 ```
 
-- [ ] **Step 4: Add `homeHeroSpotlight`**
+- [x] **Step 4: Add `homeHeroSpotlight`**
 
 Add this export near `featuredExplorations`:
 
@@ -194,7 +194,7 @@ export const homeHeroSpotlight: HomeHeroSpotlight = {
 };
 ```
 
-- [ ] **Step 5: Refresh home-only visible copy**
+- [x] **Step 5: Refresh home-only visible copy**
 
 Keep existing data shape but ensure these home data exports contain readable Chinese:
 
@@ -231,7 +231,7 @@ export const featuredExplorations: FeaturedExploration[] = [
 ];
 ```
 
-- [ ] **Step 6: Verify data types**
+- [x] **Step 6: Verify data types**
 
 Run:
 
@@ -248,7 +248,7 @@ Expected: exit code `0`.
 **Files:**
 - Create: `components/home/JourneyRouteMap.tsx`
 
-- [ ] **Step 1: Create route map component**
+- [x] **Step 1: Create route map component**
 
 Create `components/home/JourneyRouteMap.tsx`:
 
@@ -310,7 +310,7 @@ export function JourneyRouteMap({ routes }: JourneyRouteMapProps) {
 }
 ```
 
-- [ ] **Step 2: Verify component importability**
+- [x] **Step 2: Verify component importability**
 
 Run:
 
@@ -327,7 +327,7 @@ Expected: exit code `0` or only failures caused by Task 3 not yet wiring the com
 **Files:**
 - Modify: `components/home/HeroSection.tsx`
 
-- [ ] **Step 1: Replace hero imports**
+- [x] **Step 1: Replace hero imports**
 
 Replace the current imports in `components/home/HeroSection.tsx` with:
 
@@ -341,7 +341,7 @@ import { JourneyRouteMap } from "@/components/home/JourneyRouteMap";
 import { homeHeroSpotlight, homeJourneyRoutes } from "@/lib/mock-data";
 ```
 
-- [ ] **Step 2: Replace the hero component**
+- [x] **Step 2: Replace the hero component**
 
 Replace the full `HeroSection` body with:
 
@@ -442,7 +442,7 @@ export function HeroSection() {
 }
 ```
 
-- [ ] **Step 3: Verify hero wiring**
+- [x] **Step 3: Verify hero wiring**
 
 Run:
 
@@ -461,7 +461,7 @@ Expected: exit code `0`.
 - Modify: `components/home/FeatureGrid.tsx`
 - Modify: `app/page.tsx`
 
-- [ ] **Step 1: Update `FeaturedExploration` copy**
+- [x] **Step 1: Update `FeaturedExploration` copy**
 
 In `components/home/FeaturedExploration.tsx`, update the `SectionHeader` props to:
 
@@ -475,7 +475,7 @@ In `components/home/FeaturedExploration.tsx`, update the `SectionHeader` props t
 
 Keep the card map and links unchanged.
 
-- [ ] **Step 2: Update `FeatureGrid` copy and section spacing**
+- [x] **Step 2: Update `FeatureGrid` copy and section spacing**
 
 In `components/home/FeatureGrid.tsx`, change the section opening to:
 
@@ -506,7 +506,7 @@ to:
 <GlassCard className="flex h-full min-h-64 flex-col p-5 transition group-hover:border-nebula-cyan/30 group-hover:bg-white/[0.07]">
 ```
 
-- [ ] **Step 3: Adjust home page vertical rhythm**
+- [x] **Step 3: Adjust home page vertical rhythm**
 
 In `app/page.tsx`, change the wrapper class from:
 
@@ -549,7 +549,7 @@ return (
 );
 ```
 
-- [ ] **Step 4: Verify home sections**
+- [x] **Step 4: Verify home sections**
 
 Run:
 
@@ -567,7 +567,7 @@ Expected: exit code `0`.
 - Modify: `components/layout/Navbar.tsx`
 - Modify: `components/common/Footer.tsx`
 
-- [ ] **Step 1: Update Navbar header visual style**
+- [x] **Step 1: Update Navbar header visual style**
 
 In `components/layout/Navbar.tsx`, change the header class to:
 
@@ -587,7 +587,7 @@ Change the brand label class to:
 className="text-base font-semibold tracking-normal text-white"
 ```
 
-- [ ] **Step 2: Update Navbar desktop active state**
+- [x] **Step 2: Update Navbar desktop active state**
 
 Replace the desktop link class expression with:
 
@@ -600,7 +600,7 @@ className={[
 ].join(" ")}
 ```
 
-- [ ] **Step 3: Fix Navbar mobile accessibility labels**
+- [x] **Step 3: Fix Navbar mobile accessibility labels**
 
 Replace the current mojibake `aria-label` expression with:
 
@@ -625,7 +625,7 @@ className={[
 ].join(" ")}
 ```
 
-- [ ] **Step 4: Replace Footer content**
+- [x] **Step 4: Replace Footer content**
 
 Replace `components/common/Footer.tsx` with:
 
@@ -674,7 +674,7 @@ export function Footer() {
 }
 ```
 
-- [ ] **Step 5: Verify layout components**
+- [x] **Step 5: Verify layout components**
 
 Run:
 
@@ -692,7 +692,7 @@ Expected: exit code `0`.
 - Create: `scripts/visual-review-homepage.mjs`
 - Modify: `package.json`
 
-- [ ] **Step 1: Add npm script**
+- [x] **Step 1: Add npm script**
 
 In `package.json`, add:
 
@@ -708,7 +708,7 @@ Place it near the existing visual scripts:
 "visual:home": "node scripts/visual-review-homepage.mjs"
 ```
 
-- [ ] **Step 2: Create visual review script**
+- [x] **Step 2: Create visual review script**
 
 Create `scripts/visual-review-homepage.mjs`:
 
@@ -845,7 +845,7 @@ main().catch((error) => {
 });
 ```
 
-- [ ] **Step 3: Verify visual script syntax**
+- [x] **Step 3: Verify visual script syntax**
 
 Run:
 
@@ -862,7 +862,7 @@ Expected: exit code `0`.
 **Files:**
 - Modify: `docs/superpowers/plans/2026-05-24-cosmos-atlas-homepage-journey.md`
 
-- [ ] **Step 1: Run typecheck**
+- [x] **Step 1: Run typecheck**
 
 Run:
 
@@ -872,7 +872,7 @@ npm.cmd run typecheck
 
 Expected: exit code `0`.
 
-- [ ] **Step 2: Run production build**
+- [x] **Step 2: Run production build**
 
 Run:
 
@@ -882,7 +882,7 @@ npm.cmd run build
 
 Expected: exit code `0`, with `/` listed as a static route.
 
-- [ ] **Step 3: Start or verify dev server on port 3001**
+- [x] **Step 3: Start or verify dev server on port 3001**
 
 If the current dev server is not responding, start it with:
 
@@ -892,7 +892,7 @@ npm.cmd run dev -- --port 3001
 
 Expected: `http://127.0.0.1:3001/` returns `200`.
 
-- [ ] **Step 4: Run homepage visual review**
+- [x] **Step 4: Run homepage visual review**
 
 Run:
 
@@ -902,7 +902,7 @@ npm.cmd run visual:home
 
 Expected: exit code `0` and output JSON contains `"failures": []`.
 
-- [ ] **Step 5: Run existing visual reviews**
+- [x] **Step 5: Run existing visual reviews**
 
 Run:
 
@@ -913,7 +913,7 @@ npm.cmd run visual:timeline-structure
 
 Expected: both exit code `0` with `"failures": []`.
 
-- [ ] **Step 6: Check changed files for encoding problems**
+- [x] **Step 6: Check changed files for encoding problems**
 
 Run:
 
@@ -923,7 +923,7 @@ node -e "const fs=require('fs'); const files=['lib/types.ts','lib/mock-data.ts',
 
 Expected: `{"bad":[]}`.
 
-- [ ] **Step 7: Mark plan checkboxes**
+- [x] **Step 7: Mark plan checkboxes**
 
 Use `apply_patch` to change completed steps in this file from `[ ]` to `[x]` only after the corresponding verification passes.
 

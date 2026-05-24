@@ -5,16 +5,16 @@ import { homeFeatures } from "@/lib/mock-data";
 
 export function FeatureGrid() {
   return (
-    <section className="pb-10">
+    <section className="pb-10" data-visual-target="home-route-index">
       <div className="mb-7 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
         <div>
-          <p className="text-sm tracking-[0.28em] text-nebula-cyan">主要入口</p>
+          <p className="text-sm tracking-[0.28em] text-nebula-cyan">完整路线索引</p>
           <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-            先从四种探索模式进入宇宙。
+            选择一种方式继续进入宇宙。
           </h2>
         </div>
         <p className="max-w-xl text-sm leading-6 text-slate-400">
-          第二阶段补齐中文信息层级，让每个入口都具备可继续扩展的页面骨架和内容节奏。
+          每个入口都使用本地 mock 数据支撑，后续可以继续扩展为更完整的天文档案和交互工具。
         </p>
       </div>
 
@@ -24,7 +24,7 @@ export function FeatureGrid() {
 
           return (
             <Link key={feature.href} href={feature.href} className="group">
-              <GlassCard className="flex h-full min-h-64 flex-col p-5">
+              <GlassCard className="flex h-full min-h-64 flex-col p-5 transition group-hover:border-nebula-cyan/30 group-hover:bg-white/[0.07]">
                 <div className="mb-8 flex items-start justify-between">
                   <span className={`rounded-lg border p-3 ${feature.iconTone}`}>
                     <Icon size={22} />

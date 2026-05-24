@@ -9,9 +9,9 @@ export function FeaturedExploration() {
   return (
     <section className="pb-14">
       <SectionHeader
-        eyebrow="精选探索"
+        eyebrow="推荐下一站"
         title="从一个任务、一张图像和一个时间节点继续深入。"
-        description="第三阶段开始为内容建立更深的入口，让首页不只是导航，也能承担探索推荐。"
+        description="首页第一屏给出路线，这里给出更具体的起点，让探索可以马上进入一个真实页面。"
       />
 
       <div className="grid gap-4 lg:grid-cols-3">

@@ -6,13 +6,15 @@ import { homeStats } from "@/lib/mock-data";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col px-5 pb-20 pt-10 sm:px-8 lg:px-10">
+    <div className="flex w-full flex-col overflow-hidden">
       <HeroSection />
-      <section className="pb-12">
-        <MetricGrid items={homeStats} />
-      </section>
-      <FeaturedExploration />
-      <FeatureGrid />
+      <div className="mx-auto flex w-full max-w-7xl flex-col px-5 pb-20 sm:px-8 lg:px-10">
+        <section className="pb-12 pt-10">
+          <MetricGrid items={homeStats} />
+        </section>
+        <FeaturedExploration />
+        <FeatureGrid />
+      </div>
     </div>
   );
 }
