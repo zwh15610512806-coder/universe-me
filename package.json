@@ -1,0 +1,36 @@
+{
+  "name": "cosmos-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/run-next.mjs dev --webpack --hostname 127.0.0.1",
+    "build": "node scripts/run-next.mjs build --webpack",
+    "start": "node scripts/run-next.mjs start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "visual:starmap": "node scripts/visual-review-starmap.mjs",
+    "visual:timeline-structure": "node scripts/visual-review-timeline-structure.mjs",
+    "visual:home": "node scripts/visual-review-homepage.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "latest",
+    "@react-three/fiber": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "three": "latest"
+  },
+  "devDependencies": {
+    "@next/swc-wasm-nodejs": "^16.2.6",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/three": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  }
+}

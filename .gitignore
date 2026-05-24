@@ -1,0 +1,13 @@
+.next
+.codex-git
+.gh-config
+gh-credential-helper.cmd
+.superpowers
+node_modules
+artifacts
+*.log
+next-dev.out.log
+next-dev.err.log
+next-lan.out.log
+next-lan.err.log
+tsconfig.tsbuildinfo
