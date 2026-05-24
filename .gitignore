@@ -2,6 +2,7 @@
 .codex-git
 .gh-config
 gh-credential-helper.cmd
+.superpowers
 node_modules
 artifacts
 *.log
